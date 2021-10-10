@@ -1,0 +1,55 @@
+{
+  "name": "football-analytics-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.18",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/redux": "^3.6.0",
+    "@types/styled-components": "^5.1.15",
+    "connected-react-router": "^6.9.1",
+    "copy-webpack-plugin": "6.4.1",
+    "css-loader": "^5.2.4",
+    "file-loader": "^6.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.1.0",
+    "styled-components": "^5.3.1",
+    "ts-loader": "^6.1.2",
+    "typescript": "^4.1.2",
+    "typescript-plugin-styled-components": "^2.0.0",
+    "url-loader": "^2.2.0",
+    "web-vitals": "^1.0.1",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx",
+    "json",
+    "node"
+  ],
+  "moduleNameMapper": {
+    "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.ts"
+  }
+}
