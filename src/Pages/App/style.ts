@@ -75,4 +75,18 @@ const StyledImg2 = styled.img`
   position: relative;
 `;
 
-export default { StyledDiv, StyledImg, StyledText, StyledText2, StyledImg2 };
+const StyledImg3 = styled.img`
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  position: relative;
+`;
+
+export default {
+  StyledDiv,
+  StyledImg,
+  StyledText,
+  StyledText2,
+  StyledImg2,
+  StyledImg3
+};

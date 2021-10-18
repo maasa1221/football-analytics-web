@@ -55,7 +55,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|jp2|webp)$/,
+        test: /\.(png|jpe?g|gif|jp2|webp|mp3)$/,
         loader: "file-loader",
         options: {
           name(resourcePath) {
