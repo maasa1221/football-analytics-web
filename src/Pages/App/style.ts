@@ -82,11 +82,24 @@ const StyledImg3 = styled.img`
   position: relative;
 `;
 
+const TetrisBoard = styled.div`
+  width: 360px;
+  height: 600px;
+  border: solid 2px #000;
+`;
+
+const RedBlock = styled.div`
+  width: 360px;
+  height: 600px;
+  border: solid 2px #000;
+`;
+
 export default {
   StyledDiv,
   StyledImg,
   StyledText,
   StyledText2,
   StyledImg2,
-  StyledImg3
+  StyledImg3,
+  TetrisBoard
 };
