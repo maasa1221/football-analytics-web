@@ -89,7 +89,7 @@ const TetrisBoard = styled.div`
 `;
 
 const RedBlock = styled.div`
-  width: 360px;
+  width: 20px;
   height: 600px;
   border: solid 2px #000;
 `;

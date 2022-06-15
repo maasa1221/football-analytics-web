@@ -18,7 +18,7 @@ const {
   StyledImg2,
   StyledImg3,
   TetrisBoard,
-  RedBlock,
+  RedBlock
 } = styles;
 
 interface Props {
