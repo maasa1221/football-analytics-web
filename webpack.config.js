@@ -8,6 +8,7 @@ const styledComponentsTransformer =
 const BUILD_TIME = new Date().getTime();
 
 module.exports = {
+  mode: "production",
   devServer: {
     open: true,
     openPage: "",
@@ -16,9 +17,7 @@ module.exports = {
     port: 3000,
     disableHostCheck: true
   },
-  entry: {
-    main: "./src/Index.tsx"
-  },
+  entry: "./src/Index.tsx",
   output: {
     filename: "js/bundle.js"
   },
