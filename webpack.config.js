@@ -16,7 +16,9 @@ module.exports = {
     port: 3000,
     disableHostCheck: true
   },
-  entry: "./src/index.tsx",
+  entry: {
+    main: "./src/Index.tsx"
+  },
   output: {
     filename: "js/bundle.js"
   },
