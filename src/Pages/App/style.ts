@@ -102,4 +102,5 @@ export default {
   StyledImg2,
   StyledImg3,
   TetrisBoard
+  // RedBlock
 };

@@ -17,8 +17,8 @@ const {
   StyledText2,
   StyledImg2,
   StyledImg3,
-  TetrisBoard,
-  RedBlock
+  TetrisBoard
+  // RedBlock
 } = styles;
 
 interface Props {
@@ -136,9 +136,7 @@ export const App: React.FC<Props> = props => {
       <div>02.ChelseaFC</div>
       <div>03.APEX</div>
       <div>04.TETRIS</div>
-      <TetrisBoard>
-        <RedBlock />
-      </TetrisBoard>
+      <TetrisBoard>{/* <RedBlock /> */}</TetrisBoard>
     </>
   );
 };

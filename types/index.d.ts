@@ -1,0 +1,12 @@
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.gif";
+declare module "*.svg";
+declare module "*.csv";
+declare module "*.mp3";
+declare module "*.mp4";
+declare var ENV: string;
+declare var IS_LOCAL: boolean;
+declare var SENTRY_DSN: string;
+declare var RELEASE: string;
+declare var RECAPTCHA_SITE_KEY: string;
