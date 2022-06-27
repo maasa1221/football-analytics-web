@@ -19,7 +19,7 @@ module.exports = {
   },
   entry: "./src/index.tsx",
   output: {
-    filename: "js/bundle.js"
+    filename: "./js/bundle.js"
   },
   devtool: "source-map",
   resolve: {
