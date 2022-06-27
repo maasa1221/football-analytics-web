@@ -1,9 +1,7 @@
 const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
-const WriteFilePlugin = require("write-file-webpack-plugin");
 const path = require("path");
-const styledComponentsTransformer =
-  require("typescript-plugin-styled-components").default();
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const BUILD_TIME = new Date().getTime();
 
@@ -53,16 +51,7 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              getCustomTransformers: () => ({
-                before: [styledComponentsTransformer]
-              })
-            }
-          }
-        ]
+        use: [{ loader: "ts-loader" }]
       },
       {
         test: /\.(png|jpe?g|gif|jp2|webp|mp3)$/,
@@ -98,7 +87,6 @@ module.exports = {
           }
         }
       ]
-    }),
-    new WriteFilePlugin()
+    })
   ]
 };
