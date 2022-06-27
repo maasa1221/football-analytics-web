@@ -12,18 +12,27 @@ module.exports = {
   devServer: {
     open: true,
     openPage: "",
-    contentBase: path.join(__dirname, "../../dist"),
+    contentBase: path.join(__dirname, "./dist"),
     watchContentBase: true,
     port: 3000,
     disableHostCheck: true
   },
   entry: "./src/index.tsx",
   output: {
-    filename: "./js/bundle.js"
+    filename: ({ chunk }) => {
+      return chunk.name === "main" ? "js/bundle.js" : "[name]/js/bundle.js";
+    }
   },
   devtool: "source-map",
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: [".ts", ".tsx", ".js"],
+    symlinks: false,
+    cacheWithContext: false,
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.join(__dirname, "./tsconfig.json")
+      })
+    ]
   },
   module: {
     rules: [
@@ -78,7 +87,7 @@ module.exports = {
       patterns: [
         {
           from: "./",
-          to: "../dist",
+          to: "./dist",
           context: "./static/app",
           transform(buf, path) {
             if (path.endsWith(".html") || path.endsWith("status")) {
