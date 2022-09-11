@@ -1,16 +1,19 @@
 import * as React from "react";
-import { Switch } from "react-router";
-import { Route } from "react-router-dom";
-import App from "./Pages/App/Container";
+import { Route, Routes } from "react-router";
+import Home from "./Pages/Home/App";
+import Three from "./Pages/Three/App";
+import { useTracking } from "./useTracking";
 
-export const Routes: React.FC = () => {
-  console.log("aaaa");
+export const AppRoutes: React.FC = () => {
+  useTracking();
   return (
     <>
-      <App />
-      <Switch>
-        <Route exact path={`/app`} component={App} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/app" element={<Three />} />
+      </Routes>
     </>
   );
 };
+
+export { AppRoutes as Routes };

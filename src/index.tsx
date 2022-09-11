@@ -1,19 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { RouterCompat } from "./RouterCompat";
 import { Routes } from "./Routes";
-import { ConnectedRouter } from "connected-react-router";
-import store, { hashHistory } from "./Store";
-import { Provider } from "react-redux";
+import { browserHistory } from "./Store";
 
-console.log("aaaa");
 ReactDOM.render(
-  <Provider store={store}>
-    <HashRouter>
-      <ConnectedRouter history={hashHistory}>
-        <Routes />
-      </ConnectedRouter>
-    </HashRouter>
-  </Provider>,
+  // <Provider store={store}>
+  <RouterCompat history={browserHistory}>
+    <Routes />
+  </RouterCompat>,
+  // </Provider>,
   document.getElementById("app")
 );

@@ -1,14 +1,12 @@
 import React from "react";
-import { ActionDispatcher } from "./Container";
-import Logo from "../../Resources/black2.png";
-import wallPaper from "../../Resources/valo.png";
-import eft from "../../Resources/eft.jpg";
 import apex from "../../Resources/apex.jpg";
-import valo from "../../Resources/valo.mp3";
-import eftMusic from "../../Resources/eft.mp3";
 import apexMusic from "../../Resources/Apex.mp3";
+import Logo from "../../Resources/black2.png";
+import eft from "../../Resources/eft.jpg";
+import eftMusic from "../../Resources/eft.mp3";
+import valo from "../../Resources/valo.mp3";
+import wallPaper from "../../Resources/valo.png";
 import styles from "./style";
-import { createNoSubstitutionTemplateLiteral } from "typescript";
 
 const {
   StyledDiv,
@@ -21,11 +19,9 @@ const {
   // RedBlock,
 } = styles;
 
-interface Props {
-  actions: ActionDispatcher;
-}
+interface Props {}
 
-export const App: React.FC<Props> = props => {
+const Home: React.FC<Props> = props => {
   const [musicName, setMusicName] = React.useState("");
   const [flug, setflug] = React.useState(false);
   const interval = React.useRef<ReturnType<typeof setInterval>>();
@@ -140,3 +136,5 @@ export const App: React.FC<Props> = props => {
     </>
   );
 };
+
+export default Home;

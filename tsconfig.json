@@ -1,19 +1,25 @@
 {
   "compilerOptions": {
     "strictNullChecks": true,
-    //  "noUnusedLocals": true,
+    "noUnusedLocals": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "lib": ["dom", "ES2020"],
-    "module": "ES2015",
+    "lib": ["dom"],
+    "module": "ES2020",
     "target": "es5",
     "jsx": "react",
     "moduleResolution": "node",
-    "typeRoots": ["types", "node_modules/@types"]
+    "typeRoots": ["types", "node_modules/@types"],
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "exclude": ["node_modules", "scripts"]
+  "moduleDirectories": ["node_modules", "<rootDir>/node_modules", "."],
+  "exclude": ["node_modules", "apps/e2e"]
 }
