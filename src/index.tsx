@@ -1,14 +1,20 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { RouterCompat } from "./RouterCompat";
-import { Routes } from "./Routes";
-import { browserHistory } from "./Store";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+import Gourd from "./Pages/Test";
 
-ReactDOM.render(
-  // <Provider store={store}>
-  <RouterCompat history={browserHistory}>
-    <Routes />
-  </RouterCompat>,
-  // </Provider>,
-  document.getElementById("app")
+const router = createBrowserRouter([
+  {
+    path: "/test",
+    element: <Gourd />
+  }
+]);
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
