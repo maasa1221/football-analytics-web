@@ -7,7 +7,7 @@ import Gourd from "./Pages/Test";
 
 const router = createBrowserRouter([
   {
-    path: "/test",
+    path: "/",
     element: <Gourd />
   }
 ]);
